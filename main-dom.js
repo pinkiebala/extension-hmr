@@ -1,8 +1,7 @@
-import {print} from './print';
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import { App } from './app'
 
-if (module.hot) {
-  module.hot.accept('./print.js', function() {
-    console.log('Accepting the updated printMe module!');
-    print();
-  })
-}
+const div = document.createElement('div')
+document.body.append(div)
+createRoot(div).render(<App />)
